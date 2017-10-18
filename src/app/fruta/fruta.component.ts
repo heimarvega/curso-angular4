@@ -8,11 +8,14 @@ import { Component } from '@angular/core';
 export class FrutaComponent {
     public nombre_componente = 'Componente de fruta';
     public listado_frutas = 'Naranja, Papaya, Pera, Manzana';
+
+    public nombre:string = 'David';
+    public edad:number = 24;
+    public mayorDeEdad: boolean = true;
+    public trabajos: Array<any> = ['Carpintero', 25, 'Ingeniero'];
     constructor() {
-        console.log('Esta es una prueba');
+        console.log('Este es el valor en el constructor' + this.nombre_componente);
     }
-    ngOnInit() {
-        this.nombre_componente = 'Despues del ngOnInit';
-    }
+    ngOnInit() {   }
 }
 
