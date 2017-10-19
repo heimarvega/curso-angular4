@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Empleado } from './empleado';
+import { OnInit } from '@angular/core';
 
 @Component({
     selector: 'empleado',
@@ -7,15 +8,14 @@ import { Empleado } from './empleado';
 
 })
 
-export class EmpleadoComponent {
+export class EmpleadoComponent implements OnInit {
     public titulo = 'Empleado componente';
     public empleado: Empleado;
     public trabajadores: Array<Empleado>;
     public trabajador_externo: boolean;
     public color: string;
     public color_seleccionado: string;
-    constructor()
-    {
+    constructor() {
         this.empleado = new Empleado('Jose', 35, 'Cocinero', false);
         this.trabajadores = [
             new Empleado('Pedro', 20, 'Albañin', true),
@@ -30,7 +30,7 @@ export class EmpleadoComponent {
          console.log(this.empleado);
     }
 
-    cambiarExterno(valor){
+    cambiarExterno(valor) {
         this.trabajador_externo = valor;
     }
     logColorSeleccionado() {
