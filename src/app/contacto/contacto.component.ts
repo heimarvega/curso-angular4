@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 @Component({
-    selector: 'contactp',
+    selector: 'contacto',
     templateUrl: './contacto.component.html'
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit {
     public titulo = 'Página de contacto';
     public parametro;
     constructor(
@@ -18,7 +18,7 @@ export class ContactoComponent {
         });
     }
 
-    redirigir(){
+    redirigir() {
         this._router.navigate(['/contacto', 'victorroblesweb.es']);
     }
 
